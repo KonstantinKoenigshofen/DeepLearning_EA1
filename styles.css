@@ -22,12 +22,11 @@ h1 {
 .container {
   display: flex;
   gap: 20px;
-  align-items: center;
-  margin-bottom: 30px;
+  align-items: flex-start;
 }
 
-.image-column {
-  flex: 0 0 300px;
+.image-column, .chart-column {
+  flex: 1;
 }
 
 .image-column img {
@@ -35,7 +34,6 @@ h1 {
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 0;
 }
 
 img {
@@ -48,16 +46,6 @@ img {
 img:hover {
   transform: scale(1.03);
 }
-
-.chart-column {
-  flex: 1;
-  min-width: 0;        
-}
-
-.chart-column canvas {
-  height: 200px !important;  /* Gleiche Höhe wie Bild */
-}
-
 
 /* Farbcodierung */
 .correct {
