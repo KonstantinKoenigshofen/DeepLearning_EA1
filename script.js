@@ -67,8 +67,22 @@ function displayChart(results, chartId) {
 
   const ctx = canvas.getContext("2d");
 
-  const labels = results.map(r => r.label);
-  const data = results.map(r => (r.confidence * 100).toFixed(2));
+  //const labels = results.map(r => r.label);
+  //const data = results.map(r => (r.confidence * 100).toFixed(2));
+  const topResults = results.slice(0, 2);
+
+  let labels = topResults.map(r => {
+    let shortLabel = r.label.split(",")[0]; // nur erster Teil
+    return shortLabel.length > 15 
+      ? shortLabel.substring(0, 15) + "..." 
+      : shortLabel;
+  });
+
+  let data = topResults.map(r => (r.confidence * 100).toFixed(2));
+
+  labels.push("...");
+  data.push(0);
+
 
   // alten Chart zerstören
   if (canvas.chart) {
