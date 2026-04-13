@@ -22,7 +22,7 @@ h1 {
 .container {
   display: flex;
   gap: 20px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .image-column, .chart-column {
