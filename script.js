@@ -89,6 +89,21 @@ function displayChart(results, chartId) {
         y: {
           beginAtZero: true,
           max: 100
+        },
+        x: {
+          ticks: {
+            // Verhinder, dass die Namen schräg dargestellt werden
+            maxRotation: 0,
+            minRotation: 0,
+            // Labels kürzen
+            callback: function(value, index) {
+              const label = labels[index];
+              const maxLength = 12;
+              return label.length > maxLength
+                ? label.substring(0, maxLength) + '...'
+                : label;
+            }
+          }
         }
       }
     }
