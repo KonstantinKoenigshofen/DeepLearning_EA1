@@ -51,7 +51,7 @@ async function classifyImage(imgId, chartId) {
 function classifyAllImages() {
   classifyImage("Papagei", "chartPapagei");
   classifyImage("Pizza", "chartPizza");
-  classifyImage("Kolloseum", "chartKolloseum");
+  classifyImage("Zug", "chartZug");
   classifyImage("Heckenbraunelle", "chartHeckenbraunelle");
   classifyImage("Löwenzahn", "chartLöwenzahn");
   classifyImage("Hausratte", "chartHausratte");
