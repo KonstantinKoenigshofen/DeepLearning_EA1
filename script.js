@@ -111,7 +111,7 @@ function displayChart(results, chartId) {
         tooltip: {
           callbacks: {
             title: function(tooltipItems) {
-              return label[tooltipItems[0].dataIndex];
+              return labels[tooltipItems[0].dataIndex];
             }
           }
         }
