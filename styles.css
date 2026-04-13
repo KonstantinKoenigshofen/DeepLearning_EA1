@@ -21,8 +21,19 @@ h1 {
 
 .container {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
+}
+
+.image-column,
+.chart-column,
+.text-column {
+  flex: 1;
+}
+
+.text-column {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .image-column, .chart-column {
