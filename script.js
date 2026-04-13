@@ -69,11 +69,14 @@ function displayChart(results, chartId) {
 
   //const labels = results.map(r => r.label);
   //const data = results.map(r => (r.confidence * 100).toFixed(2));
-  // Top 3 Ergebnisse
   const topResults = results.slice(0, 3);
 
-  // Confidence in Prozent
-  const data = topResults.map(r => (r.confidence * 100).toFixed(2));
+  let labels = topResults.map(r => r.label);
+  let data = topResults.map(r => (r.confidence * 100).toFixed(2));
+
+  // "..." hinzufügen
+  labels.push("...");
+  data.push(0);
 
   // alten Chart zerstören
   if (canvas.chart) {
