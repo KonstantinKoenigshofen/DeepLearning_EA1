@@ -67,16 +67,8 @@ function displayChart(results, chartId) {
 
   const ctx = canvas.getContext("2d");
 
-  //const labels = results.map(r => r.label);
-  //const data = results.map(r => (r.confidence * 100).toFixed(2));
-  const topResults = results.slice(0, 3);
-
-  let labels = topResults.map(r => r.label);
-  let data = topResults.map(r => (r.confidence * 100).toFixed(2));
-
-  // "..." hinzufügen
-  labels.push("...");
-  data.push(0);
+  const labels = results.map(r => r.label);
+  const data = results.map(r => (r.confidence * 100).toFixed(2));
 
   // alten Chart zerstören
   if (canvas.chart) {
