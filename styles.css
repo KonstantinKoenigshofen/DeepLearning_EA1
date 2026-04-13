@@ -26,7 +26,9 @@ h1 {
 }
 
 .image-column, .chart-column {
-  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-column img {
