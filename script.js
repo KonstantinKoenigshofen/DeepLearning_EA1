@@ -105,6 +105,16 @@ function displayChart(results, chartId) {
             }
           }
         }
+      },
+      // Anzeigen aller Namen im Tooltip
+      plugins: {
+        tooltip: {
+          callbacks: {
+            title: function(tooltipItems) {
+              return label[tooltipItems[0].dataIndex];
+            }
+          }
+        }
       }
     }
   });
