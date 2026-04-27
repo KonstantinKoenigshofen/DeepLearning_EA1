@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Image Classification mit ml5</title>
+  <title>EA1: Bilderkennung mit ml5.js</title>
   <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -130,7 +130,7 @@
   <h2>Eigenes Bild hochladen</h2>
 
   <div id="dropzone">
-    <p>Bild hier hineinziehen oder klicken zum Auswählen</p>
+    <p>Bild hier hineinziehen oder Bereich anklicken zum Auswählen</p>
     <input type="file" id="upload" accept="image/*">
   </div>
 
@@ -175,8 +175,11 @@
     somit direkt im Browser ohne weitere Abhängigkeiten verwendet werden.
   </p>
   <p>
-    Die Bibliothek Chart.js wurde zur Visualisierung der Klassifikationsergebnisse genutzt. 
-    Dabei werden die vom Modell ausgegebenen Wahrscheinlichkeiten (Confidence-Werte) als Balkendiagramm dargestellt.
+    Die Bibliothek Chart.js wurde zur Visualisierung der Klassifikationsergebnisse genutzt, 
+    wobei die vom Modell ausgegebenen Wahrscheinlichkeiten (Confidence-Werte) als Balkendiagramm dargestellt. 
+    Da einige Ergebnisse einen langen Text als Ausgabe haben, wurden diese übersichtshalber mit "..." gekürzt. 
+    Der vollständige Text und der genaue Confidence-Wert kann allerdings mithife des Tooltips angezeigt werden, indem
+    man mit dem Mauszeiger über den jeweiligen Balken fährt.
   </p>
   <h3>Fachlich:</h3>
   <p>
