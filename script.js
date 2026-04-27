@@ -173,6 +173,11 @@ function displayImage(file) {
 
   reader.onload = (event) => {
     preview.src = event.target.result;
+
+    // Warten bis Bild geladen ist
+    preview.onload = () => {
+      classifyUserImage();
+    };
   };
 
   reader.readAsDataURL(file);

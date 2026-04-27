@@ -104,7 +104,9 @@ button:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+
 #dropzone {
+  height: 200px;
   border: 2px dashed #aaa;
   padding: 30px;
   text-align: center;
@@ -122,6 +124,7 @@ button:hover {
   max-width: 300px;
   margin-top: 20px;
   display: block;
+  margin: 0 auto;
 }
 
 #upload {
