@@ -13,6 +13,13 @@ h1 {
   margin: 0;
 }
 
+.author {
+  font-size: 0.5em;
+  font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
 .section {
   margin: 40px auto;
   width: 90%;
