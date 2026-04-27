@@ -7,14 +7,14 @@ let modelLoaded = false;
 async function loadModel() {
   classifier = await ml5.imageClassifier('MobileNet');
   modelLoaded = true;
-  console.log("Modell geladen!");
+  console.log("Modell geladen");
 
   classifyAllImages();
 }
 
 async function classifyUserImage() {
   if (!modelLoaded) {
-    alert("Modell lädt noch...");
+    alert("Modell lädt...");
     return;
   }
 

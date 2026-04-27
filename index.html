@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<h1>Bilderkennung mit ml5.js</h1>
+<h1>EA1: Bilderkennung mit ml5.js</h1>
 
 <!-- RICHTIGE KLASSIFIKATION -->
 <div class="section">
@@ -115,7 +115,7 @@
 
                 
         <div class="text-column">
-            <p><strong>Eingabe:</strong> Hausratte</p>
+            <p><strong>Eingabe:</strong> Wanderratte</p>
             <p><strong>Ausgabe:</strong> weasel (Wiesel)</p>
             <p><a href="https://en.wikipedia.org/wiki/Weasel" target="_blank">
                 Bild der Ausgabe zum Vergleich ansehen</a>
@@ -152,8 +152,8 @@
     weshalb hier das Modell vielleicht wenige "Ablenkungen" hat, um zu einem anderen Entschluss zu kommen (z.B. ist der Hintergrund beim ersten Bild unscharf).
   </p>
   <p>
-    Das Bild der Heckenbraunelle und der Hausratte wurde hingegen falsch klassifiziert. Bei ersterem hatte das Modell den Vogel mit anderen ähnlich aussehenden Arten
-    verwechselt (z.B. hat das Weibchen des Bergfinks ein ähnlich gefärbtes Gefieder wie das der Heckenbraunelle). Ein möglicher Grund, warum die Hausratte mit einem 
+    Das Bild der Heckenbraunelle und der Wanderratte wurde hingegen falsch klassifiziert. Bei ersterem hatte das Modell den Vogel mit anderen ähnlich aussehenden Arten
+    verwechselt (z.B. hat das Weibchen des Bergfinks ein ähnlich gefärbtes Gefieder wie das der Heckenbraunelle). Ein möglicher Grund, warum die Ratte mit einem 
     Wiesel verwechselt wurde, ist, dass der hintere Abschnitt des Körpers, vor allem der Schwanz des Tieres, auf dem Bild nicht zu erkennen ist.
   </p>
   <p>
@@ -169,8 +169,29 @@
 <!-- DOKUMENTATION -->
 <div class="section">
   <h2>Dokumentation</h2>
+  <h3>Technisch:</h3>
   <p>
-    <!-- Technisch + Fachlich -->
+    Das Framework ml5.js wurde für das Laden eines vortrainierten Bilderkennungsmodells (MobileNet) verwendet. Die Bilderkennung kann
+    somit direkt im Browser ohne weitere Abhängigkeiten verwendet werden.
+  </p>
+  <p>
+    Die Bibliothek Chart.js wurde zur Visualisierung der Klassifikationsergebnisse genutzt. 
+    Dabei werden die vom Modell ausgegebenen Wahrscheinlichkeiten (Confidence-Werte) als Balkendiagramm dargestellt.
+  </p>
+  <h3>Fachlich:</h3>
+  <p>
+    Die HTML-Datei wurde in fünf Sektionen aufgeteiltt: korrekt klassifizierte Bilder, 
+    falsch klassifizierte Bilder, Benutzerinteraktion sowie Diskussion und Dokumentation.
+    Dabei wurde für jedes Bild ein Container erstellt, der das Bild, einen Canvas und Details zur Klassifizierung nebeneinander abbildet. 
+    Die Bilder stammen dabei alle von <a href="https://pixabay.com/de/" target="_blank"></a> und sind lizenzfrei.
+  </p>
+  <p>
+    In der JavaScript-Datei wurden Funktionen für das Modell sowie für das Hochladen eines eigenen Bildes implementiert. 
+    Dabei wird zuerst das Modell asynchron geladen. Ist dies erfolgreich abgeschlossen, werden die angezeigten Bilder, falls diese ebenfalls vollständig geladen sind, 
+    klassifiziert und das jeweilige Ergebnis in einem Balkendiagramm mithilfe von Chart.js angezeigt. 
+    Mithilfe der FileReader-Klasse kann der Nutzer über die Dateiauswahl oder per Drag-and-Drop ein Bild hochladen 
+    und dieses anschließend per Button mit dem geladenen Modell klassifizieren lassen. 
+    Das Design der Seite wurde in einer CSS-Datei angepasst.
   </p>
 </div>
 
