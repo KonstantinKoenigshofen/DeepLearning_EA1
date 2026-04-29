@@ -160,7 +160,7 @@
   </p>
   <p>
     Der Löwenzahn wurde mit einem hohen Confidence-Wert mit Raps verwechselt. Ein möglicher Grund dafür ist, dass das Modell wahrscheinlich Löwenzahn nicht in der Form
-    wie auf dem Bild gelernt hat, also nicht als Pflanzen, welche massenweise auf einem Feld wachsen. Raps ist hingegen auch gelb und wird typischerweise auf Feldern
+    wie auf dem Bild gelernt hat, also nicht als Pflanze, welche massenweise auf einem Feld wächst. Raps ist hingegen auch gelb und wird typischerweise auf Feldern
     angebaut. Dazu kommt noch die Unschärfe im Hintergrund, welche möglicherweise auch einen Teil zur Fehlklassifikation beiträgt. 
   </p>
 
@@ -178,7 +178,7 @@
   </p>
   <p>
     Die Bibliothek Chart.js wurde zur Visualisierung der Klassifikationsergebnisse genutzt, 
-    wobei die vom Modell ausgegebenen Wahrscheinlichkeiten (Confidence-Werte) als Balkendiagramm dargestellt. 
+    wobei die vom Modell ausgegebenen Wahrscheinlichkeiten (Confidence-Werte) als Balkendiagramm dargestellt wurden. 
     Da einige Ergebnisse einen langen Text als Ausgabe haben, wurden diese übersichtshalber mit "..." gekürzt. 
     Der vollständige Text und der genaue Confidence-Wert kann allerdings mithife des Tooltips angezeigt werden, indem
     man mit dem Mauszeiger über den jeweiligen Balken fährt.
@@ -195,8 +195,8 @@
     In der JavaScript-Datei wurden Funktionen für das Modell sowie für das Hochladen eines eigenen Bildes implementiert. 
     Dabei wird zuerst das Modell asynchron geladen. Ist dies erfolgreich abgeschlossen, werden die angezeigten Bilder, falls diese ebenfalls vollständig geladen sind, 
     klassifiziert und das jeweilige Ergebnis in einem Balkendiagramm mithilfe von Chart.js angezeigt. 
-    Mithilfe der FileReader-Klasse kann der Nutzer über die Dateiauswahl oder per Drag-and-Drop ein Bild hochladen 
-    und dieses anschließend per Button mit dem geladenen Modell klassifizieren lassen. 
+    Mithilfe der FileReader-Klasse kann der Nutzer über die Dateiauswahl oder per Drag-and-Drop ein Bild hochladen. 
+    Das Bild wird direkt nach dem laden automatisch klassifiziert und die Ergebnisse werden angezeigt. 
     Das Design der Seite wurde in einer CSS-Datei angepasst.
   </p>
 </div>
