@@ -164,8 +164,8 @@ function handleFile(e) {
 
 // Bild anzeigen
 function displayImage(file) {
-  if (!file || !file.type.startsWith("image/")) {
-    alert("Bitte ein Bild hochladen!");
+  if (!["image/png", "image/jpeg"].includes(file.type)) {
+    alert("Bitte nur PNG oder JPG hochladen!");
     return;
   }
 
